@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "postbuild": "echo 'User-agent: *\nAllow: /' > dist/robots.txt",
     "lint": "eslint .",
     "preview": "vite preview",

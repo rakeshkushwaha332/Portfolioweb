@@ -45,7 +45,7 @@ const SortingVisualizer = () => {
   const bubbleSort = () => {
     setSorting(true);
     const arrayCopy = [...array];
-    const animations = [];
+    const animations: [number, number, boolean][] = [];
 
     for (let i = 0; i < arrayCopy.length; i++) {
       for (let j = 0; j < arrayCopy.length - i - 1; j++) {

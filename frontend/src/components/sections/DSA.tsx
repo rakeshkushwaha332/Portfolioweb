@@ -8,16 +8,6 @@ import SortingVisualizer from '../visualizers/SortingVisualizer';
 const DSA = () => {
   const [activeTab, setActiveTab] = useState('problems');
   
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -85,9 +75,9 @@ const DSA = () => {
 
 const ProblemsTab = () => {
   // Filter problems by difficulty
-  const easyProblems = portfolioData.dsaProblems.filter(p => p.difficulty === 'Easy');
-  const mediumProblems = portfolioData.dsaProblems.filter(p => p.difficulty === 'Medium');
-  const hardProblems = portfolioData.dsaProblems.filter(p => p.difficulty === 'Hard');
+  const easyProblems = portfolioData.dsaProblems.filter(p => p.difficulty === 'Easy') as DSAProblem[];
+  const mediumProblems = portfolioData.dsaProblems.filter(p => p.difficulty === 'Medium') as DSAProblem[];
+  const hardProblems = portfolioData.dsaProblems.filter(p => p.difficulty === 'Hard') as DSAProblem[];
 
   const containerVariants = {
     hidden: { opacity: 0 },
