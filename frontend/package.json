@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "postbuild": "echo 'User-agent: *\nAllow: /' > dist/robots.txt",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "netlify deploy --prod"
   },
   "dependencies": {
     "axios": "^1.8.4",
